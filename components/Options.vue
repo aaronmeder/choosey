@@ -1,25 +1,14 @@
 <template>
   <section class="options">
-    <h2>From what options do you want to decide?</h2>
+    <p class="instructions">From what options do you want to decide?</p>
     <form>
-      <p>
-        <label for="option1">1</label>
+      <p v-for="option in options" :key="option.index">
+        <label for="option1">{{ option.index }}</label>
         <input
-          v-model="options[0]"
+          v-model="option.value"
           name="option1"
           type="text"
           class="option"
-          placeholder="Go to the cinema..."
-        />
-      </p>
-      <p>
-        <label for="option2">2</label>
-        <input
-          v-model="options[1]"
-          name="option2"
-          type="text"
-          class="option"
-          placeholder="Stay at home"
         />
       </p>
       <p class="actions">
@@ -33,20 +22,30 @@
 export default {
   data: function() {
     return {
-      options: ['First choice', 'Second choice']
+      options: [
+        { value: 'Local Data Option One' },
+        { value: 'Local Data Option Two' }
+      ]
     }
   },
   methods: {
+    saveResults(allOptions, winningOption) {
+      this.$store.commit('options/saveAllOptions', allOptions)
+      this.$store.commit('options/saveWinningOption', winningOption)
+    },
     submitForm(event) {
       event.preventDefault()
 
-      // decide
+      // decide which options wins
       const winningOption = this.getRandomOption(this.options)
+      console.log(winningOption) // eslint-disable-line
+
+      // save infos to store
+      this.saveResults(this.options, winningOption)
 
       // redirect to success page
       this.$router.push({
-        path: '/winner',
-        params: { options: this.options, winningOption: winningOption }
+        path: '/winner'
       })
     },
     getRandomOption(options) {

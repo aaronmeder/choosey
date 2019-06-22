@@ -1,7 +1,7 @@
 <template>
   <footer class="app-footer">
     <div class="container">
-      Please
+      &copy; Feel free to
       <a href="https://github.com/aaronmeder/choosey">copy right</a>.
     </div>
   </footer>
@@ -10,6 +10,7 @@
 <style lang="scss" scoped>
 @import '../../assets/css/basics/variables';
 .app-footer {
+  font-size: 0.8rem;
   color: $smokey-smoke-text;
 }
 
