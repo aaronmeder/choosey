@@ -1,13 +1,13 @@
 <template>
-  <Options />
+  <Winner />
 </template>
 
 <script>
-import Options from '../components/Options.vue'
+import Winner from '../components/Winner.vue'
 
 export default {
   components: {
-    Options
+    Winner
   }
 }
 </script>

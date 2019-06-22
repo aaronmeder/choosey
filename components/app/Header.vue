@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <header>
     <h1>
       <nuxt-link to="/">Choosey</nuxt-link>
     </h1>
-    <div class="slogan">It is decided</div>
-  </div>
+    <div class="slogan">Easy Breezy Decisions</div>
+  </header>
 </template>

@@ -30,6 +30,15 @@ a {
   }
 }
 
+input {
+  font-size: 1rem;
+  color: $smokey-smoke-text;
+
+  &::placeholder{
+    color: $smokey-smoke-text;    
+  }
+}
+
 
 /* Headings
 ------------- */
