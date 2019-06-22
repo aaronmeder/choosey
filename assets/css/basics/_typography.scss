@@ -1,0 +1,47 @@
+/*
+-------------------------
+Typography 
+-------------------------
+*/
+
+/* Imports
+------------- */
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
+/* Basic Settings
+------------- */
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: $font-stack-primary;
+  font-size: 1rem;
+  color: $good-night-dark;
+}
+
+a {
+  color: $friendly-blue;
+
+  &:hover {
+    color: $friendly-blue;
+    opacity: 0.8;
+  }
+}
+
+
+/* Headings
+------------- */
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
