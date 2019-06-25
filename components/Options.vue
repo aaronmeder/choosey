@@ -32,7 +32,7 @@
             class="option"
             value=""
           />
-          <button class="btn btn--save-item" @click="addItem">Save Item</button> <button class="btn btn--cancel-add-item" @click="cancelAddItem">x</button>
+          <button class="btn btn--save-item" @click="addItem">Add Item</button> <button class="btn btn--cancel-add-item" @click="cancelAddItem">x</button>
         </div>
       <!-- eslint-disable-next-line -->
       </p>
