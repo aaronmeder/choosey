@@ -49,8 +49,8 @@ export default {
     return {
       isAdding: false,
       options: [
-        { value: 'Local Data Option One' },
-        { value: 'Local Data Option Two' }
+        { value: 'Option One' },
+        { value: 'Option Two' }
       ],
       newOption: ''
     }
