@@ -4,9 +4,14 @@ Content
 -------------------------
 */
 
-.app-content {
-  padding: 1rem 2rem;
-  width: 100vw;
-  flex: 1;
-  overflow-y: scroll;
+.app-content{
+
+  section{
+    max-width: 550px;
+  }
+
+  p{
+    margin-bottom: 1rem;
+  }
+
 }

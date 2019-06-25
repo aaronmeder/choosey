@@ -1,8 +1,9 @@
 <template>
   <footer class="app-footer">
     <div class="container">
-      &copy; Feel free to
-      <a href="https://github.com/aaronmeder/choosey">copy right</a>.
+      Choosey is written by
+      <a href="https://twitter.com/aaronmeder">Aaron Meder</a> -
+      <a href="https://github.com/aaronmeder/choosey">Feel free to copy</a>
     </div>
   </footer>
 </template>
@@ -10,8 +11,8 @@
 <style lang="scss" scoped>
 @import '../../assets/css/basics/variables';
 .app-footer {
-  padding: 1rem 2rem;
-  height: 50px;
+  padding-top: 2rem;
+  text-align: center;
   font-size: 0.8rem;
   color: $smokey-smoke-text;
 }

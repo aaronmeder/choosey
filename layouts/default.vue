@@ -1,10 +1,12 @@
 <template>
   <div class="app-wrapper">
     <Header />
-    <div class="container app-content-container app-content">
-      <nuxt />
+    <div class="app-main">
+      <div class="app-content">
+        <nuxt />
+      </div>
+      <Footer />
     </div>
-    <Footer />
   </div>
 </template>
 
@@ -21,11 +23,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-wrapper {
-  height: 100vh;
-  width: 100vw;
+.app-main {
   display: flex;
   flex-direction: column;
+  padding: 2rem;
+  min-height: calc(100vh - 100px);
+}
+
+.app-content {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 </style>
