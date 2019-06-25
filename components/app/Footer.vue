@@ -10,6 +10,8 @@
 <style lang="scss" scoped>
 @import '../../assets/css/basics/variables';
 .app-footer {
+  padding: 1rem 2rem;
+  height: 50px;
   font-size: 0.8rem;
   color: $smokey-smoke-text;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-wrapper">
     <Header />
     <div class="container app-content-container app-content">
       <nuxt />
@@ -20,4 +20,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.app-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>

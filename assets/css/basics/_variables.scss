@@ -1,7 +1,7 @@
 
 /*
 -------------------------
-Variables 
+Variables
 -------------------------
 */
 
@@ -29,3 +29,35 @@ $good-night-dark-text: #8c8f92;
 ------------- */
 
 $container-width: 640px;
+
+$small-width: 700px;
+$large-width: 980px;
+$xlarge-width: 1400px;
+
+
+/* Breakpoints
+------------- */
+
+@mixin small {
+  @media (max-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$small-width + 1px}) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: #{$xlarge-width}) {
+    @content;
+  }
+}
