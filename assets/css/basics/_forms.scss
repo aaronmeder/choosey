@@ -1,0 +1,22 @@
+/*
+-------------------------
+Forms
+-------------------------
+*/
+
+/* Inputs
+------------- */
+
+input {
+  padding: $sizing-s;
+  border: $sizing-xs $smokey-smoke-light solid;
+  border-radius: $sizing-s;
+  color: $smokey-smoke;
+  background-color: white;
+  width: 100%;
+
+  &:focus {
+    border-color: $friendly-blue;
+    outline: none;
+  }
+}

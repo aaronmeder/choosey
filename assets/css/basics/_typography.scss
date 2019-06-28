@@ -1,6 +1,6 @@
 /*
 -------------------------
-Typography 
+Typography
 -------------------------
 */
 
@@ -32,10 +32,10 @@ a {
 
 input {
   font-size: 1rem;
-  color: $smokey-smoke-text;
+  color: $smokey-smoke-light;
 
   &::placeholder{
-    color: $smokey-smoke-text;    
+    color: $smokey-smoke-light;
   }
 }
 

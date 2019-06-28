@@ -20,9 +20,19 @@ $light-blue: #9dc8e4;
 $light-blue-text: #465c6e;
 $friendly-yellow: #ffcd24;
 $smokey-smoke: #5a5f63;
-$smokey-smoke-text: #a9abac;
+$smokey-smoke-light: #a9abac;
 $good-night-dark: #2d3135;
 $good-night-dark-text: #8c8f92;
+
+
+/* Sizing Units
+------------- */
+
+$sizing-xs: 0.25rem;
+$sizing-s: 0.5rem;
+$sizing-m: 1.25rem;
+$sizing-l: 2.5rem;
+$sizing-xl: 5rem;
 
 
 /* Sizes
@@ -33,6 +43,8 @@ $container-width: 640px;
 $small-width: 700px;
 $large-width: 980px;
 $xlarge-width: 1400px;
+
+
 
 
 /* Breakpoints

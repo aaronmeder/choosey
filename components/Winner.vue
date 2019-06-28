@@ -38,7 +38,7 @@ export default {
     border: 2px $smokey-smoke solid;
     border-radius: 5px;
     color: $smokey-smoke;
-    background-color: $smokey-smoke-text;
+    background-color: $smokey-smoke-light;
   }
 }
 </style>
