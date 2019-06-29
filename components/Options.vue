@@ -1,6 +1,6 @@
 <template>
   <section class="options">
-    <p class="instructions">From what options do you want to decide?</p>
+    <h2>From what options do you want to decide?</h2>
     <form action="" method="POST">
       <p v-for="option in options" :key="option.index">
         <label for="option1">{{ option.index }}</label>
@@ -10,19 +10,20 @@
           type="text"
           class="option"
           value=""
+          placeholder="Enter an Option"
         />
       </p>
       <p class="add-item">
         <label for="option1"></label>
-        <button 
-          v-if="!isAdding" 
-          class="btn btn--add-item" 
-          @click="isAdding = !isAdding" 
+        <button
+          v-if="!isAdding"
+          class="btn btn--add-item"
+          @click="isAdding = !isAdding"
         >
-          Add Item
+          + Add Option
         </button>
         <div
-          v-if="isAdding" 
+          v-if="isAdding"
           class="adding-item__fields"
         >
           <input
@@ -32,12 +33,20 @@
             class="option"
             value=""
           />
-          <button class="btn btn--save-item" @click="addItem">Add Item</button> <button class="btn btn--cancel-add-item" @click="cancelAddItem">x</button>
+          <div class="adding-item__actions">
+            <button class="btn btn--positive save-item" @click="addItem">Add Option</button>
+            <button class="btn btn--negative cancel-add-item" @click="cancelAddItem">x</button>
+          </div>
         </div>
       <!-- eslint-disable-next-line -->
       </p>
-      <p class="actions">
-        <button @click="submitForm">Decide for me</button>
+      <p class="form__actions">
+        <button
+          class="btn btn--large btn--primary"
+          @click="submitForm"
+        >
+          Decide for me
+        </button>
       </p>
     </form>
   </section>
@@ -49,8 +58,8 @@ export default {
     return {
       isAdding: false,
       options: [
-        { value: 'Option One' },
-        { value: 'Option Two' }
+        { value: '' },
+        { value: '' }
       ],
       newOption: ''
     }
@@ -101,3 +110,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+.adding-item {
+
+  &__actions {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+</style>
+

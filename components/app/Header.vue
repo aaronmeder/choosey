@@ -25,7 +25,7 @@ h1 {
 }
 
 a {
-  color: $good-night-dark;
+  color: black;
   text-decoration: none;
 }
 </style>

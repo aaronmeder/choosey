@@ -11,12 +11,45 @@ input {
   padding: $sizing-s;
   border: $sizing-xs $smokey-smoke-light solid;
   border-radius: $sizing-s;
-  color: $smokey-smoke;
+  color: black;
+  font-size: 1rem;
   background-color: white;
   width: 100%;
 
   &:focus {
     border-color: $friendly-blue;
     outline: none;
+  }
+
+  &::placeholder{
+    color: $smokey-smoke-light;
+  }
+}
+
+button,
+.btn {
+  padding: $sizing-s $sizing-m;
+  border: $sizing-xs $smokey-smoke-light solid;
+  border-radius: $sizing-m;
+  color: $smokey-smoke;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: $smokey-smoke-light;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+  }
+
+  &--primary {
+    border-color: $friendly-blue;
+    color: $friendly-blue-text;
+    background-color: $friendly-blue;
+  }
+
+  &--negative {
+    border-color: $dangerous-pink-secondary;
+    color: $dangerous-pink;
+    background-color: $dangerous-pink-secondary;
   }
 }
