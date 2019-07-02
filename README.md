@@ -1,5 +1,21 @@
-# Choosey
+# choosey
 
-Choosey makes your desicions easy as 1-2-3!
+> Choosey makes your decisions easy as 1-2-3!
 
-Started: June 22, 2019 by Aaron Meder aaron@choosey.me
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+

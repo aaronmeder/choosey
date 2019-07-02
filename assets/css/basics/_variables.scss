@@ -1,0 +1,77 @@
+
+/*
+-------------------------
+Variables
+-------------------------
+*/
+
+/* Fonts
+------------- */
+
+$font-stack-primary: 'Rubik', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
+
+/* Colors
+------------- */
+
+$friendly-blue: #2aabe4;
+$friendly-blue-text: #16506d;
+$light-blue: #9dc8e4;
+$light-blue-text: #465c6e;
+$friendly-yellow: #ffcd24;
+$smokey-smoke: #5a5f63;
+$smokey-smoke-light: #a9abac;
+$good-night-dark: #2d3135;
+$good-night-dark-text: #8c8f92;
+$dangerous-pink: #cc6273;
+$dangerous-pink-secondary: #ffd8d4;
+
+
+/* Sizing Units
+------------- */
+
+$sizing-xs: 0.25rem;
+$sizing-s: 0.5rem;
+$sizing-m: 1.25rem;
+$sizing-l: 2.5rem;
+$sizing-xl: 5rem;
+
+
+/* Sizes
+------------- */
+
+$container-width: 640px;
+
+$small-width: 700px;
+$large-width: 980px;
+$xlarge-width: 1400px;
+
+
+
+
+/* Breakpoints
+------------- */
+
+@mixin small {
+  @media (max-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$small-width + 1px}) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: #{$xlarge-width}) {
+    @content;
+  }
+}
