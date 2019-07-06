@@ -16,12 +16,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  padding: 1rem;
+  // height: 100px;
   text-align: center;
 }
 
 h1 {
   margin: 0;
+}
+
+.slogan {
+  @include small {
+    display: none;
+  }
 }
 
 a {

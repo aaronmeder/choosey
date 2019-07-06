@@ -1,8 +1,8 @@
 <template>
   <footer class="app-footer">
     <div class="container">
-      Choosey is written by
-      <a href="https://twitter.com/aaronmeder">Aaron Meder</a> -
+      By
+      <a href="https://twitter.com/aaronmeder">Aaron Meder</a> —
       <a href="https://github.com/aaronmeder/choosey">Feel free to copy</a>
     </div>
   </footer>

@@ -26,7 +26,7 @@ export default {
 .app-main {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 0 1rem 1rem 1rem;
   min-height: calc(100vh - 100px);
 }
 
