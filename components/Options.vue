@@ -1,6 +1,6 @@
 <template>
   <section class="options">
-    <h2>From what options do you want to decide?</h2>
+    <h2>Your Options</h2>
     <form action="" method="POST">
       <p v-for="option in options" :key="option.index">
         <label for="option1">{{ option.index }}</label>
@@ -92,9 +92,13 @@ export default {
     submitForm(event) {
       event.preventDefault()
 
-      // decide which options wins
+      // save option that is currently beeing edited
+      if(this.newOption !== '') {
+        this.options.push({ value: this.newOption });
+      }
+
+      // decide which option wins
       const winningOption = this.getRandomOption(this.options)
-      console.log(winningOption) // eslint-disable-line
 
       // save infos to store
       this.saveResults(this.options, winningOption)
