@@ -27,7 +27,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 0 1rem 1rem 1rem;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 125px);
 }
 
 .app-content {

@@ -1,6 +1,6 @@
 <template>
   <section class="options">
-    <h2>Your Options</h2>
+    <h1>Your Options</h1>
     <form action="" method="POST">
       <p v-for="option in options" :key="option.index">
         <label for="option1">{{ option.index }}</label>

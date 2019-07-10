@@ -36,6 +36,11 @@ button,
   font-weight: bold;
   background-color: $smokey-smoke-light;
 
+  &:focus {
+    filter: brightness(1.1);
+    outline: none;
+  }
+
   &:hover {
     cursor: pointer;
     filter: brightness(1.1);
