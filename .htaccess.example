@@ -1,3 +1,5 @@
+# Redirect all http to https
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} off
