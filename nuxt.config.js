@@ -1,8 +1,17 @@
+require('dotenv').config()
+
 export default {
   mode: 'universal',
   /*
    ** Headers of the page
    */
+  env: {
+    routerBase: process.env.ROUTER_BASE || '/',
+    baseUrl: process.env.BASE_URL || 'https://choosesy.me'
+  },
+  router: {
+    base: process.env.ROUTER_BASE
+  },
   head: {
     title: 'Choosey | Easy Breezy Decision Making',
     meta: [
