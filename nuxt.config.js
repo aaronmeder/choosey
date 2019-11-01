@@ -23,7 +23,33 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.ico'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.ico'
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/apple-touch-icon.png'
+      },
+      {
+        rel: 'manifest',
+        href: '/site.webmanifest'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
