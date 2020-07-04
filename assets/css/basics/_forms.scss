@@ -36,14 +36,14 @@ button,
   font-weight: bold;
   background-color: $smokey-smoke-light;
 
-  &:focus {
-    filter: brightness(1.1);
-    outline: none;
-  }
-
   &:hover {
     cursor: pointer;
     filter: brightness(1.1);
+  }
+
+  &:focus {
+    filter: brightness(1.1);
+    outline: none;
   }
 
   &--primary {
@@ -57,4 +57,9 @@ button,
     color: $dangerous-pink;
     background-color: $dangerous-pink-secondary;
   }
+
+}
+
+.errors {
+  color: $dangerous-pink;
 }

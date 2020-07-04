@@ -11,14 +11,15 @@
           class="option"
           value=""
           placeholder="Enter an Option"
+          autocomplete="off"
         />
       </p>
       <p class="add-item">
         <label for="option1"></label>
         <button
           v-if="!isAdding"
-          class="btn btn--add-item"
           @click="isAdding = !isAdding"
+          class="btn btn--add-item"
         >
           + Add Option
         </button>
@@ -31,19 +32,27 @@
             name="option1"
             type="text"
             class="option"
+            placeholder="Enter an Option"
             value=""
+            autocomplete="off"
           />
           <div class="adding-item__actions">
-            <button class="btn btn--positive save-item" @click="addItem">Add Option</button>
-            <button class="btn btn--negative cancel-add-item" @click="cancelAddItem">x</button>
+            <button @click="addItem" class="btn btn--positive save-item">Add Option</button>
+            <button @click="cancelAddItem" class="btn btn--negative cancel-add-item">x</button>
           </div>
         </div>
       <!-- eslint-disable-next-line -->
       </p>
       <p class="form__actions">
+        <p
+          v-if="this.error"
+          class="errors"
+        >
+          {{ this.error }}
+        </p>
         <button
-          class="btn btn--large btn--primary"
           @click="submitForm"
+          class="btn btn--large btn--primary"
         >
           Decide for me
         </button>
@@ -61,7 +70,8 @@ export default {
         { value: '' },
         { value: '' }
       ],
-      newOption: ''
+      newOption: '',
+      error: '',
     }
   },
   methods: {
@@ -91,17 +101,27 @@ export default {
     },
     submitForm(event) {
       event.preventDefault()
+      this.errors = ''
 
-      // save option that is currently beeing edited
-      if(this.newOption !== '') {
-        this.options.push({ value: this.newOption });
+      // save option that is currently beeing added
+      if(this.newOption.value !== '') {
+        this.options.push({ value: this.newOption })
+      }
+
+      // filter out empty options
+      const validOptions = this.options.filter( option => option.value.length > 0 && option.value !== '' )
+
+      // abort if there are no valid options
+      if( validOptions.length === 0 ) {
+        this.error = 'You are giving me an impossible choice to make 🙈'
+        return
       }
 
       // decide which option wins
-      const winningOption = this.getRandomOption(this.options)
+      const winningOption = this.getRandomOption(validOptions)
 
       // save infos to store
-      this.saveResults(this.options, winningOption)
+      this.saveResults(validOptions, winningOption)
 
       // redirect to success page
       this.$router.push({
