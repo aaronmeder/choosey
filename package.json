@@ -1,7 +1,7 @@
 {
   "name": "choosey",
   "version": "1.0.0",
-  "description": "Choosey makes your decisions easy as 1-2-3!",
+  "description": "Make your desicions easy as 1-2-3!",
   "author": "Aaron Meder",
   "private": true,
   "scripts": {
