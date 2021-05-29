@@ -1,4 +1,3 @@
-
 /*
 -------------------------
 Variables
@@ -8,8 +7,9 @@ Variables
 /* Fonts
 ------------- */
 
-$font-stack-primary: 'Rubik', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-
+// Uses systemfontstack.com
+$font-stack-primary: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+  segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 
 /* Colors
 ------------- */
@@ -26,16 +26,14 @@ $good-night-dark-text: #8c8f92;
 $dangerous-pink: #cc6273;
 $dangerous-pink-secondary: #ffd8d4;
 
-
 /* Sizing Units
 ------------- */
 
-$sizing-xs: 0.25rem;
+$sizing-xs: 0.2rem;
 $sizing-s: 0.5rem;
 $sizing-m: 1.25rem;
 $sizing-l: 2.5rem;
 $sizing-xl: 5rem;
-
 
 /* Sizes
 ------------- */
@@ -45,9 +43,6 @@ $container-width: 640px;
 $small-width: 700px;
 $large-width: 980px;
 $xlarge-width: 1400px;
-
-
-
 
 /* Breakpoints
 ------------- */

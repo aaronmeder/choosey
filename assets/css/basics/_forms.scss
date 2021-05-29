@@ -9,10 +9,10 @@ Forms
 
 input {
   padding: $sizing-s;
-  border: $sizing-xs $smokey-smoke-light solid;
+  border: 2px $smokey-smoke-light solid;
   border-radius: $sizing-s;
   color: black;
-  font-size: 1rem;
+  font-size: 0.8rem;
   background-color: white;
   width: 100%;
 
@@ -21,7 +21,7 @@ input {
     outline: none;
   }
 
-  &::placeholder{
+  &::placeholder {
     color: $smokey-smoke-light;
   }
 }
@@ -32,7 +32,7 @@ button,
   border: $sizing-xs $smokey-smoke-light solid;
   border-radius: $sizing-m;
   color: $smokey-smoke;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   background-color: $smokey-smoke-light;
 
@@ -57,7 +57,6 @@ button,
     color: $dangerous-pink;
     background-color: $dangerous-pink-secondary;
   }
-
 }
 
 .errors {

@@ -4,10 +4,6 @@ Typography
 -------------------------
 */
 
-/* Imports
-------------- */
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
-
 /* Basic Settings
 ------------- */
 
@@ -19,6 +15,8 @@ body {
   font-family: $font-stack-primary;
   font-size: 1rem;
   color: black;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -30,18 +28,17 @@ a {
   }
 }
 
-
 /* Headings
 ------------- */
 
 h1 {
   margin: 1rem 0;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 h2 {
   margin: 0.8rem 0;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 h3 {

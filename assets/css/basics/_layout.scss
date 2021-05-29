@@ -4,7 +4,11 @@ Basic Resets
 -------------------------
 */
 
-html, body, ul, li, p {
+html,
+body,
+ul,
+li,
+p {
   margin: 0;
   padding: 0;
 }
@@ -12,7 +16,9 @@ html, body, ul, li, p {
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -22,7 +28,7 @@ Basic Settings
 -------------------------
 */
 
-body { 
+body {
   width: 100%;
   box-sizing: border-box;
 }

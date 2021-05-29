@@ -5,7 +5,7 @@
 
     <div class="decision__options">
       <div
-        v-if="this.options.allOptions.length > 1"
+        v-if="options.allOptions.length > 1"
         class="decision__options--multiple"
       >
         Chosen out of the options
@@ -17,9 +17,7 @@
         ></span>
       </div>
 
-      <div v-else class="decision__options--single">
-        which won unrivalled.
-      </div>
+      <div v-else class="decision__options--single">which won unrivalled.</div>
     </div>
   </section>
 </template>
@@ -36,8 +34,8 @@ export default {
       } else {
         return ''
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

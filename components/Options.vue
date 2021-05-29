@@ -1,6 +1,6 @@
 <template>
   <section class="options">
-    <h2>Your Options</h2>
+    <h2>Enter Your Options</h2>
     <form action="" method="POST">
       <p v-for="option in options" :key="option.index">
         <label for="option1">{{ option.index }}</label>
@@ -18,8 +18,8 @@
         <label for="option1"></label>
         <button
           v-if="!isAdding"
-          @click="isAdding = !isAdding"
           class="btn btn--add-item"
+          @click="isAdding = !isAdding"
         >
           + Add Option
         </button>
@@ -37,22 +37,22 @@
             autocomplete="off"
           />
           <div class="adding-item__actions">
-            <button @click="addItem" class="btn btn--positive save-item">Add Option</button>
-            <button @click="cancelAddItem" class="btn btn--negative cancel-add-item">x</button>
+            <button class="btn btn--positive save-item" @click="addItem">Add Option</button>
+            <button class="btn btn--negative cancel-add-item" @click="cancelAddItem">x</button>
           </div>
         </div>
       <!-- eslint-disable-next-line -->
       </p>
       <p class="form__actions">
         <p
-          v-if="this.error"
+          v-if="error"
           class="errors"
         >
-          {{ this.error }}
+          {{ error }}
         </p>
         <button
-          @click="submitForm"
           class="btn btn--large btn--primary"
+          @click="submitForm"
         >
           Decide for me
         </button>
@@ -63,7 +63,7 @@
 
 <script>
 export default {
-  data: function() {
+  data() {
     return {
       isAdding: false,
       options: [

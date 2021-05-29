@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <h1>
-        <nuxt-link to="/">Choosey</nuxt-link>
+        <nuxt-link to="/">choosey</nuxt-link>
       </h1>
       <div class="slogan">Easy Breezy Decisions</div>
     </div>
