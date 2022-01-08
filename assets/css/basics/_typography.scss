@@ -1,0 +1,47 @@
+/*
+-------------------------
+Typography
+-------------------------
+*/
+
+/* Basic Settings
+------------- */
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: $font-stack-primary;
+  font-size: 1rem;
+  color: black;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $friendly-blue;
+
+  &:hover {
+    color: $friendly-blue;
+    opacity: 0.8;
+  }
+}
+
+/* Headings
+------------- */
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0.8rem 0;
+  font-size: 1.4rem;
+}
+
+h3 {
+  margin: 0.6rem 0;
+  font-size: 1.4rem;
+}
