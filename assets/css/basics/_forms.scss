@@ -8,13 +8,9 @@ Forms
 ------------- */
 
 input {
-  padding: $sizing-s;
-  border: 2px $smokey-smoke-light solid;
-  border-radius: $sizing-s;
-  color: black;
-  font-size: 0.8rem;
+  border-radius: $border-radius;
+  border: 2px $smokey-smoke solid;
   background-color: white;
-  width: 100%;
 
   &:focus {
     border-color: $friendly-blue;
@@ -28,21 +24,10 @@ input {
 
 button,
 .btn {
-  padding: $sizing-s $sizing-m;
-  border: $sizing-xs $smokey-smoke-light solid;
-  border-radius: $sizing-m;
-  color: $smokey-smoke;
-  font-size: 0.8rem;
-  font-weight: bold;
-  background-color: $smokey-smoke-light;
-
   &:hover {
-    cursor: pointer;
-    filter: brightness(1.1);
   }
 
   &:focus {
-    filter: brightness(1.1);
     outline: none;
   }
 

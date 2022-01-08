@@ -1,36 +1,11 @@
 /*
 -------------------------
-Basic Resets
--------------------------
-*/
-
-html,
-body,
-ul,
-li,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-/*
--------------------------
 Basic Settings
 -------------------------
 */
 
 body {
-  width: 100%;
-  box-sizing: border-box;
+  padding: $sizing-l;
 }
 
 section {
