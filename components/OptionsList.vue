@@ -130,10 +130,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.adding-item {
-  &__actions {
-    display: block;
-    margin-top: 0.5rem;
-  }
+.option {
+  margin-bottom: 1rem;
+}
+
+.form__actions {
+  margin-top: 1rem;
 }
 </style>

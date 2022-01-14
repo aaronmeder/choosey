@@ -14,10 +14,10 @@
   padding-top: 2rem;
   text-align: center;
   font-size: 0.8rem;
-  color: $smokey-smoke-light;
+  color: black;
 }
 
 a {
-  color: $smokey-smoke-light;
+  color: black;
 }
 </style>

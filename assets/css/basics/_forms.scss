@@ -7,23 +7,32 @@ Forms
 /* Inputs
 ------------- */
 
-input {
+input,
+textarea,
+select {
+  padding: 1rem 1.5rem;
   border-radius: $border-radius;
-  border: 2px $smokey-smoke solid;
+  border: none;
   background-color: white;
 
   &:focus {
-    border-color: $friendly-blue;
+    border-color: $accent-primary;
     outline: none;
   }
 
   &::placeholder {
-    color: $smokey-smoke-light;
+    color: black;
   }
 }
 
 button,
 .btn {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: $border-radius;
+  color: white;
+  background-color: black;
+
   &:hover {
   }
 
@@ -32,9 +41,8 @@ button,
   }
 
   &--primary {
-    border-color: $friendly-blue;
-    color: $friendly-blue-text;
-    background-color: $friendly-blue;
+    color: white;
+    background-color: $accent-primary;
   }
 
   &--negative {

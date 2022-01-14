@@ -44,7 +44,7 @@ export default {
 
 .decision {
   &__options {
-    color: $smokey-smoke-light;
+    color: black;
   }
 
   &__option {
