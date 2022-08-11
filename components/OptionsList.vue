@@ -2,56 +2,56 @@
   <section class="options">
     <h2>Enter Your Options</h2>
     <form action="" method="POST">
-      <div v-for="option in options" :key="option.index">
-        <label for="option1">{{ option.index }}</label>
+      <div
+        v-for="(option, index) in options"
+        :key="index"
+        class="option-wrapper"
+      >
         <input
           v-model="option.value"
-          name="option1"
           type="text"
           class="option"
           value=""
-          placeholder="Enter an Option"
           autocomplete="off"
+          :data-index="index"
+          @click="onInputClicked"
+          @blur="onInputBlur"
         />
+        <button
+          class="btn btn--dangerous btn--delete btn--icon-only"
+          :data-index="index"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+            />
+          </svg>
+        </button>
       </div>
       <div class="add-item">
-        <label for="option1"></label>
+        <!-- <label for="option1"></label> -->
         <button
-          v-if="!isAdding"
-          class="btn btn--add-item"
-          @click="isAdding = !isAdding"
+          class="btn btn--ghost btn--sm btn--add-item"
+          @click.prevent="addOption"
         >
-          + Add Option
+          + Add Another Option
         </button>
-        <div v-if="isAdding" class="adding-item__fields">
-          <input
-            v-model="newOption"
-            name="option1"
-            type="text"
-            class="option"
-            placeholder="Enter an Option"
-            value=""
-            autocomplete="off"
-          />
-          <div class="adding-item__actions">
-            <button class="btn btn--positive save-item" @click="addItem">
-              Add Option
-            </button>
-            <button
-              class="btn btn--negative cancel-add-item"
-              @click="cancelAddItem"
-            >
-              x
-            </button>
-          </div>
-        </div>
       </div>
       <div class="form__actions">
         <div v-if="error" class="errors">
           {{ error }}
         </div>
         <button class="btn btn--large btn--primary" @click="submitForm">
-          Decide for me
+          Choose for me
         </button>
       </div>
     </form>
@@ -62,43 +62,32 @@
 export default {
   data() {
     return {
-      isAdding: false,
       options: [{ value: '' }, { value: '' }],
-      newOption: '',
       error: '',
     }
   },
   methods: {
+    addOption() {
+      this.options.push({ value: '' })
+    },
+    onInputClicked(event) {
+      // find option wrapper
+      // const thisOptionIndex = event.target.dataset.index
+      const thisOptionWrapper = event.target.closest('.option-wrapper')
+      thisOptionWrapper.classList.add('focused')
+    },
+    onInputBlur(event) {
+      // find option wrapper
+      const thisOptionWrapper = event.target.closest('.option-wrapper')
+      thisOptionWrapper.classList.remove('focused')
+    },
     saveResults(allOptions, winningOption) {
       this.$store.commit('options/saveAllOptions', allOptions)
       this.$store.commit('options/saveWinningOption', winningOption)
     },
-    addItem(event) {
-      event.preventDefault()
-      // if item isn't empty...
-      if (this.newOption !== '') {
-        // save the new option
-        this.options.push({ value: this.newOption })
-
-        // reset new option field
-        this.newOption = ''
-      }
-    },
-    cancelAddItem(event) {
-      event.preventDefault()
-      // reset add item status
-      this.isAdding = false
-      // reset new option field
-      this.newOption = ''
-    },
     submitForm(event) {
       event.preventDefault()
       this.errors = ''
-
-      // save option that is currently beeing added
-      if (this.newOption.value !== '') {
-        this.options.push({ value: this.newOption })
-      }
 
       // filter out empty options
       const validOptions = this.options.filter(
@@ -130,11 +119,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.option {
-  margin-bottom: 1rem;
+.option-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  &.focused {
+    .btn--delete {
+      transform: scale3d(1, 1, 1);
+    }
+  }
 }
 
 .form__actions {
   margin-top: 1rem;
+}
+
+.btn {
+  &--add-item {
+    padding-left: 0;
+  }
+
+  &--delete {
+    transform: scale3d(0, 0, 0);
+    transition: transform 200ms linear;
+  }
 }
 </style>

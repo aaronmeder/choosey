@@ -12,11 +12,16 @@ textarea,
 select {
   padding: 1rem 1.5rem;
   border-radius: $border-radius;
-  border: none;
+  border: 1px transparent solid;
   background-color: white;
+  box-shadow: none;
+  transition: box-shadow 250ms ease-out, border-color 250ms ease-out;
 
   &:focus {
-    border-color: $accent-primary;
+    //border-color: $accent-primary;
+    --tw-shadow-color: #ccc;
+    box-shadow: 0 10px 15px -3px var(--tw-shadow-color),
+      0 4px 6px -4px var(--tw-shadow-color);
     outline: none;
   }
 
@@ -40,15 +45,39 @@ button,
     outline: none;
   }
 
+  &--sm {
+    font-size: 90%;
+  }
+
   &--primary {
     color: white;
     background-color: $accent-primary;
   }
 
-  &--negative {
+  &--dangerous {
     border-color: $dangerous-pink-secondary;
     color: $dangerous-pink;
     background-color: $dangerous-pink-secondary;
+  }
+
+  &--ghost {
+    color: currentColor;
+    background-color: transparent;
+  }
+
+  &--soft {
+    color: #333;
+    background-color: #ccc;
+  }
+
+  &--icon-only {
+    width: 50px;
+    padding: 1rem;
+
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
