@@ -12,22 +12,24 @@ textarea,
 select {
   padding: 1rem 1.5rem;
   border-radius: $border-radius;
-  border: 1px transparent solid;
+  border: 2px transparent solid;
   background-color: white;
   box-shadow: none;
   transition: box-shadow 250ms ease-out, border-color 250ms ease-out;
 
   &:focus {
-    //border-color: $accent-primary;
-    --tw-shadow-color: #ccc;
-    box-shadow: 0 10px 15px -3px var(--tw-shadow-color),
-      0 4px 6px -4px var(--tw-shadow-color);
+    border-color: $accent-primary;
     outline: none;
+    background-color: $accent--light;
   }
 
   &::placeholder {
     color: black;
   }
+}
+
+input {
+  min-height: 50px;
 }
 
 button,
@@ -37,6 +39,7 @@ button,
   border-radius: $border-radius;
   color: white;
   background-color: black;
+  min-height: 50px;
 
   &:hover {
   }
@@ -83,4 +86,9 @@ button,
 
 .errors {
   color: $dangerous-pink;
+}
+
+.notification-bar {
+  display: block;
+  margin: 2rem 0;
 }

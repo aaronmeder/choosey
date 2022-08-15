@@ -14,7 +14,9 @@ $font-stack-primary: -apple-system, BlinkMacSystemFont, avenir next, avenir,
 /* Colors
 ------------- */
 
-$accent-primary: blue;
+$accent-primary: #3461fd;
+$accent--dark: #152663;
+$accent--light: #dde3f8;
 $medium-grey: #555;
 $light-grey: #e5e7eb;
 $dangerous-pink: #cc6273;
@@ -39,33 +41,27 @@ $sizing-xl: 5rem;
 
 $container-width: 640px;
 
-$small-width: 700px;
-$large-width: 980px;
-$xlarge-width: 1400px;
+$tablet-width: 700px;
+$laptop-width: 1100px;
+$desktop-width: 1400px;
 
 /* Breakpoints
 ------------- */
 
-@mixin small {
-  @media (max-width: #{$small-width}) {
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet-width}) {
     @content;
   }
 }
 
-@mixin medium {
-  @media (max-width: #{$large-width}) {
+@mixin laptop {
+  @media only screen and (min-width: #{$laptop-width}) {
     @content;
   }
 }
 
-@mixin large {
-  @media (min-width: #{$small-width + 1px}) {
-    @content;
-  }
-}
-
-@mixin xlarge {
-  @media (min-width: #{$xlarge-width}) {
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop-width}) {
     @content;
   }
 }

@@ -25,8 +25,10 @@ h1 {
 }
 
 .slogan {
-  @include small {
-    display: none;
+  display: none;
+
+  @include tablet {
+    display: block;
   }
 }
 

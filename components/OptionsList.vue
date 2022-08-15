@@ -1,6 +1,6 @@
 <template>
   <section class="options">
-    <h2>Enter Your Options</h2>
+    <h2>Your Options</h2>
     <form action="" method="POST">
       <div
         v-for="(option, index) in options"
@@ -47,7 +47,7 @@
         </button>
       </div>
       <div class="form__actions">
-        <div v-if="error" class="errors">
+        <div v-if="error" class="errors notification-bar">
           {{ error }}
         </div>
         <button class="btn btn--large btn--primary" @click="submitForm">
@@ -120,29 +120,39 @@ export default {
 
 <style lang="scss" scoped>
 .option-wrapper {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  --button-width: 50px;
+  --button-spacing: 1rem;
+  --app-outer-spacing: 2rem;
+  margin-right: calc(-1 * var(--app-outer-spacing));
+  margin-left: calc(-1 * var(--app-outer-spacing));
+  padding-right: var(--app-outer-spacing);
+  padding-left: var(--app-outer-spacing);
+  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
 
   &.focused {
-    .btn--delete {
-      transform: scale3d(1, 1, 1);
+    button {
+      transform: translateX(calc(-1 * var(--app-outer-spacing)));
+    }
+
+    input {
+      width: calc(100% - var(--button-width) - var(--button-spacing));
     }
   }
-}
 
-.form__actions {
-  margin-top: 1rem;
-}
-
-.btn {
-  &--add-item {
-    padding-left: 0;
+  input {
+    width: 100%;
   }
 
-  &--delete {
-    transform: scale3d(0, 0, 0);
-    transition: transform 200ms linear;
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    transform: translateX(50vw);
+    transition: transform 250ms ease-out;
   }
 }
 </style>
