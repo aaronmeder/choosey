@@ -22,26 +22,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.app {
-}
-/*. app {
-  display: grid;
-  min-height: calc(100vh - 2 * 2.5rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  &__main {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  &__content {
-    width: 100%;
-  } 
-}*/
-</style>
+<style lang="scss" scoped></style>

@@ -66,6 +66,10 @@ export default {
     '@nuxt/content',
   ],
 
+  styleResources: {
+    scss: ['~/assets/css/basics/variables.scss'],
+  },
+
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {

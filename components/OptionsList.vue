@@ -151,8 +151,12 @@ export default {
     top: 0;
     height: 50px;
     width: 50px;
-    transform: translateX(50vw);
-    transition: transform 250ms ease-out;
+    transform: translateX(100px);
+    transition: transform 350ms ease-out;
+
+    @media only screen and (min-width: 700px) {
+      transform: translateX(50vw);
+    }
   }
 }
 </style>
